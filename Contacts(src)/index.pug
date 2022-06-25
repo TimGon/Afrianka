@@ -1,0 +1,139 @@
+doctype html
+html(lang='en')
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Contacts
+body
+    header.header 
+            .header__contain.flex
+                a.header__link
+                    img.header__logo(src="images/logo.svg", alt="logo")
+                                    
+                .header__burger 
+                    span
+                        
+                .header__subnav
+                    .header__wrapper
+                        .header__about-us
+                            .header__wrap.flex
+                                span.header__subtitle(href="#") About US
+                                .arrow 
+                                    .arrow-left 
+                                    .arrow-right 
+                            -var lst = ['About', 'What We Do', 'Project', 'How It Work With Us']
+                            nav.header__menu 
+                                ul.header__lst
+                                    each items in lst
+                                        li.header__item
+                                            a.header__nav(href= "#")= items
+                        .header__info
+                            .header__wrap.flex
+                                span.header__subtitle(href="#") Follow US
+                                .arrow 
+                                    .arrow-left 
+                                    .arrow-right 
+                                    
+                            -var lst = ['Instagram', 'Facebook', 'LinkedIn', 'Youtube']
+                            nav.header__menu 
+                                ul.header__lst
+                                    each items in lst
+                                        li.header__item
+                                            a.header__nav(href= "#")= items
+                        .header__page 
+                            .header__wrap.flex
+                                span.header__subtitle(href="#") Our Pages
+                                .arrow 
+                                    .arrow-left 
+                                    .arrow-right  
+                            -var links = ['Blog', 'Contacts']
+                            nav.header__menu 
+                                ul.header__lst
+                                    each item in links
+                                        li.header__item
+                                            a.header__nav(href="D:/Диск С/Create Site/Mediasoft(SITE)"+ item + "Page/dist/index.html")= item
+    main.main
+        section.about
+            .about__content.container 
+                h1.about__title.white Contact Us
+                span.about__dscr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        section.contacts 
+            .wrap.container.flex 
+                .contacts__info 
+                    img.contacts__logo(src="./images/Rest.png", alt="Rest")
+                    .contacts__adress 
+                        h2.title address
+                        p.paragraph Id convallis placerat sit sed duis id amet volutpat quam a, pharetra.
+                    .contacts__phone
+                        h2.title phone
+                        .links.flex
+                            a.item.contacts__phones(href="#") +62-812-7313-4321
+                            a.item.contacts__phones(href="#") +62-817-000-1234
+                        span 
+                    .contacts__services
+                        h2.title online service
+                        .links.flex
+                            a.item.contacts__browsers(href="#") www.afrianska.com
+                            a.item.contacts__emails(href="#") hello.afrian@gmail.com
+                .contacts__form.flex
+                    h2.title send us message
+                    form.form.flex(action="#")
+                        label.form__name(for="#") Full Name 
+                        label(for="name")
+                            input#name.form__names(type="text" placeholder="Your Name")
+                        label.form__email(for="#") Email 
+                        label(for="email") 
+                            input#email.form__emails(type="email" placeholder="Your Email")
+                        label.form__meessage(for="#") Message 
+                        label(for="message") 
+                            textarea#message.form__meessages(name="meessage", placeholder="Your Message")
+                        input.contacts__submit(type="button" value="SUBMIT")
+                .contacts__map 
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aaf0d105bbd7d39dcb73647962da332e9730eebab654d241721c872e9665065d0&amp;source=constructor" width="100%" height="480" frameborder="0"></iframe>
+    footer.footer
+            .container
+                .footer__team.flex
+                        .footer__content
+                            h2.title.white.footer__title 
+                                | Intersted to woek
+                                | with our team?
+                            p.paragraph.footer__paragraph.white
+                                | Lorem ipsum dolor sit amet,
+                                | consectetur adipiscing elit, sed do
+                                | eiusmod tempor incididunt ut 
+                                | labore et dolore magna aliqua.
+                        button.btn.footer__light Let’s Talk
+                hr.line
+                .footer__contacts.flex.container
+                    .footer__contact
+                        .footer__logo.flex 
+                            img(src="images/logo-light.svg", alt="logo")
+                            span Afrianska
+                        .footer__adress.flex 
+                            .str A.
+                            p.paragraph.footer__white Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        .footer__phones.flex 
+                            .str T.
+                            a.footer__phone(href="#") +62-812-7313-4321
+                        .footer__email.flex 
+                            .str E 
+                            a.email(href="mailto:hello.afrian@gmail.com") hello.afrian@gmail.com
+                    .footer__transition.flex
+                        nav.footer__navs 
+                            .title-nav About US
+                            -var lst = ['About', 'What We Do', 'Project', 'How It Work With Us']
+                                        nav.footer__menu 
+                                            ul.footer__lst
+                                                each items in lst
+                                                    li.footer__item
+                                                        a.footer__nav(href= "#")= items
+                    .footer__social.flex
+                        .title-nav Follow US
+                        -var lst = ['Instagram', 'Facebook', 'LinkedIn', 'Youtube']
+                        nav.social
+                            ul.footer__lst
+                                each items in lst
+                                    li.footer__item
+                                        a.footer__nav(href= "#")= items
+                .footer__copyright 2019 © Afrianska. All rights reserved.
