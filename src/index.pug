@@ -1,0 +1,213 @@
+doctype html
+html(lang='en')
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Site
+body
+    header.header 
+        .header__contain.flex
+            a.header__link
+                img.header__logo(src="images/logo.svg", alt="logo")
+                                
+            .header__burger 
+                span
+                    
+            .header__subnav
+                .header__wrapper
+                    .header__about-us
+                        .header__wrap.flex
+                            span.header__subtitle(href="#") About US
+                            .arrow 
+                                .arrow-left 
+                                .arrow-right 
+                        -var lst = ['About', 'What We Do', 'Project', 'How It Work With Us']
+                        nav.header__menu 
+                            ul.header__lst
+                                each items in lst
+                                    li.header__item
+                                        a.header__nav(href= "#")= items
+                    .header__info
+                        .header__wrap.flex
+                            span.header__subtitle(href="#") Follow US
+                            .arrow 
+                                .arrow-left 
+                                .arrow-right 
+                                
+                        -var lst = ['Instagram', 'Facebook', 'LinkedIn', 'Youtube']
+                        nav.header__menu 
+                            ul.header__lst
+                                each items in lst
+                                    li.header__item
+                                        a.header__nav(href= "#")= items
+                    .header__page 
+                        .header__wrap.flex
+                            span.header__subtitle(href="#") Our Pages
+                            .arrow 
+                                .arrow-left 
+                                .arrow-right  
+                        -var links = ['Blog', 'Contacts']
+                        nav.header__menu 
+                            ul.header__lst
+                                each item in links
+                                    li.header__item
+                                        a.header__nav(href="D:/Диск С/Create Site/Mediasoft(SITE)"+ item + "Page/dist/index.html")= item
+    main.main 
+        section.about
+            .flex.container
+                .about__content 
+                    h1.about__title 
+                        | New Automation 
+                        | Tool for Your Home
+                    p.paragraph.about__paragraph 
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        | Faucibus tristique vulputate ultrices ut mauris tellus at. 
+                        | Posuere sollicitudin odio tellus elit.
+                    button.btn.about__dark See Our Project
+                img.about__ilustration(src="images/illustration.png", alt="ilustration")
+        section.whatwedo
+            .grid.container
+                .whatwedo__title    
+                    h2.title.whatwedo__light 
+                        | What we do to help
+                        | our client grow in
+                        | digital era,
+                        
+                .whatwedo__tecnology.blocks.flex
+                    img.imgs(src="images/man.png", alt="man")
+                    .whatwedo__info 
+                        h3.subtitle 
+                            | Bring Technology To Your 
+                            | Comfrotable Home
+                        p.paragraph-dscr.paragraph
+                            | Lorem ipsum dolor sit amet,
+                            | consectetur adipiscing elit, sed do
+                            | eiusmod tempor incididunt ut 
+                            | labore et dolore magna aliqua.
+                        .whatwedo__btn.flex  
+                            a.whatwedo__more(href="#") Learn more 
+                            a(href="#")
+                                img.whatwedo__arrow(src="./images/arrow.svg", alt="arrow")
+
+                .whatwedo__business.blocks.flex
+                    img.imgs(src="./images/business.png", alt="business")
+                    .whatwedo__info 
+                        h3.subtitle 
+                            | Make Your business To Be
+                            | Better Famous In Internet 
+                        p.paragraph-dscr.paragraph
+                            | Lorem ipsum dolor sit amet,
+                            | consectetur adipiscing elit, sed do
+                            | eiusmod tempor incididunt ut 
+                            | labore et dolore magna aliqua.
+                        .whatwedo__btn.flex  
+                            a.whatwedo__more(href="#") Learn more 
+                            a(href="#")
+                                img.whatwedo__arrow(src="./images/arrow.svg", alt="arrow")
+
+                .whatwedo__digital.blocks.flex
+                    img.imgs(src="./images/woman.png", alt="woman")
+                    .whatwedo__info 
+                        h3.subtitle 
+                            | Build Your Digital Product 
+                            | That Suitable For Your Need
+                        p.paragraph-dscr.paragraph
+                            | Lorem ipsum dolor sit amet,
+                            | consectetur adipiscing elit, sed do
+                            | eiusmod tempor incididunt ut 
+                            | labore et dolore magna aliqua.
+                        .whatwedo__btn.flex 
+                            a.whatwedo__more(href="#") Learn more 
+                            a(href="#") 
+                                img.whatwedo__arrow(src="./images/arrow.svg", alt="arrow")
+        
+        section.project
+            .container
+                .project__block.flex
+                    h2.title.project__dark 
+                        | Our Finished
+                        | Project
+                    p.paragraph.dscr
+                        |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+                        |eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+                        |enim ad minim veniam.
+                .project__slider 
+                    .slider 
+                        .slide.slider__slide-one
+                            img.slide__home(src="./images/functional.png", alt="home")
+                            h2.title.position-right.slide__title Smart Home Installation
+                            span.subtitle.position-right.slide__subtitle In Muarakana Housing Estate
+                        .slider__wrap.flex
+                            .slide.slider__slide-two 
+                                h2.title.position-std Sparklite App
+                                span.subtitle.subtitle-two Marketplace
+                            .slide.slider__slide-three 
+                                h2.title.position-std Car-Rapetition App
+                                span.subtitle.subtitle-two Board
+        footer.footer
+            section.client 
+                .client__jaw.container.flex
+                    .client__content.container.flex
+                        h2.title.white
+                            | Our Beloved
+                            | Client
+                        p.paragraph.dscr.client__dscr
+                            |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+                            |eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+                            |enim ad minim veniam.
+                    -var logotypes= ['1', '2', '3', '4', '5', '6', '7'];
+                    .client__logotypes
+                        .client__wrap.flex 
+                            each item in logotypes 
+                                div(class="flex logotypes")
+                                    a.logotypes__item(href="#")= "logo client " + item
+                            .client__more 
+                                a.client__link(href="#") More Client
+            section.info 
+                .container
+                    .info__team.flex
+                            .info__content
+                                h2.title.white.info__title 
+                                    | Intersted to woek
+                                    | with our team?
+                                p.paragraph.info__paragraph.white
+                                    | Lorem ipsum dolor sit amet,
+                                    | consectetur adipiscing elit, sed do
+                                    | eiusmod tempor incididunt ut 
+                                    | labore et dolore magna aliqua.
+                            button.btn.info__light Let’s Talk
+                    hr.line
+                    .info__contacts.flex.container
+                        .info__contact
+                            .info__logo.flex 
+                                img(src="images/logo-light.svg", alt="logo")
+                                span Afrianska
+                            .info__adress.flex 
+                                .str A.
+                                p.paragraph.info__white Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            .info__phones.flex 
+                                .str T.
+                                a.info__phone(href="tel:+6281273134321") +62-812-7313-4321
+                            .info__email.flex 
+                                .str E 
+                                a.email(href="mailto:hello.afrian@gmail.com") hello.afrian@gmail.com
+                    
+                        .info__transition.flex
+                            nav.info__navs 
+                                .title-nav About US
+                                -var lst = ['About', 'What We Do', 'Project', 'How It Work With Us']
+                                            nav.info__menu 
+                                                ul.info__lst
+                                                    each items in lst
+                                                        li.info__item
+                                                            a.info__nav(href= "#")= items
+                        .info__social.flex
+                            .title-nav Follow US
+                            -var lst = ['Instagram', 'Facebook', 'LinkedIn', 'Youtube']
+                            nav.social
+                                ul.info__lst
+                                    each items in lst
+                                        li.info__item
+                                            a.info__nav(href= "#")= items
+                    .info__copyright 2019 © Afrianska. All rights reserved.
