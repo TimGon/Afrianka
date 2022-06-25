@@ -1,0 +1,275 @@
+doctype html
+html(lang='en')
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Blog
+body
+    header.header 
+            .header__contain.flex
+                a.header__link
+                    img.header__logo(src="images/logo.svg", alt="logo")
+                                    
+                .header__burger 
+                    span
+                        
+                .header__subnav
+                    .header__wrapper
+                        .header__about-us
+                            .header__wrap.flex
+                                span.header__subtitle(href="#") About US
+                                .arrow 
+                                    .arrow-left 
+                                    .arrow-right 
+                            -var lst = ['About', 'What We Do', 'Project', 'How It Work With Us']
+                            nav.header__menu 
+                                ul.header__lst
+                                    each items in lst
+                                        li.header__item
+                                            a.header__nav(href= "#")= items
+                        .header__info
+                            .header__wrap.flex
+                                span.header__subtitle(href="#") Follow US
+                                .arrow 
+                                    .arrow-left 
+                                    .arrow-right 
+                                    
+                            -var lst = ['Instagram', 'Facebook', 'LinkedIn', 'Youtube']
+                            nav.header__menu 
+                                ul.header__lst
+                                    each items in lst
+                                        li.header__item
+                                            a.header__nav(href= "#")= items
+                        .header__page 
+                            .header__wrap.flex
+                                span.header__subtitle(href="#") Our Pages
+                                .arrow 
+                                    .arrow-left 
+                                    .arrow-right  
+                            -var links = ['Blog', 'Contacts']
+                            nav.header__menu 
+                                ul.header__lst
+                                    each item in links
+                                        li.header__item
+                                            a.header__nav(href="D:/Диск С/Create Site/Mediasoft(SITE)"+ item + "Page/dist/index.html")= item
+    main.main 
+        section.about
+            .about__content.container 
+                h1.about__title.white Blog Afrianska
+                span.about__dscr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        .search.container
+            form(action="#").form
+                input.search__input(type="text" placeholder="Search Article") 
+                button.search__btn 
+                    img(src="./images/Search.svg", alt="search") 
+        section.popular 
+            .container 
+                span.popular__name popular 
+                .popular__blocks
+                    article.popular__about
+                        .popular__wrap.flex
+                            .popular__info.flex 
+                                h2.title.popular__title Feugiat sodales at nullam tellus.
+                                p.popular__paragraph.paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi posuere nibh tempor fringilla porta pellentesque ipsum.
+                                .info.flex
+                                    .author.flex 
+                                        span.name-author Samatha Leuthex
+                                        span.date May 5, 3 min read
+                                    .icon 
+                                        img.favorite(src="./images/favorite.svg", alt="favorite")
+                                        a.icon__item(href="#")
+                                            img.share(src="./images/share.svg", alt="share")
+                            .popular__photo 
+                                img.popular__img(src="./images/modern-home.jpg", alt="modern-home")
+                    .wrap.flex    
+                        article.block
+                            .flex.blocks
+                                .block__photo 
+                                    img.block__img(src="./images/tools.jpg", alt="tools")
+                                .content 
+                                    h2.title.content__title Porta proin tellus sed pulvinar odio eu pulvinar.
+                                    p.paragraph.content__dscr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    .info.flex
+                                        .author.flex 
+                                            span.name-author Samatha Leuthex
+                                            span.date May 5, 3 min read
+                                        .icon 
+                                            img.favorite(src="./images/favorite.svg", alt="favorite")
+                                            a.icon__item(href="#")
+                                                img.share(src="./images/share.svg", alt="share")
+                            
+                        article.block
+                            .flex.blocks
+                                .block__photo 
+                                    img.block__img(src="./images/home.jpg", alt="home")
+                                .content 
+                                    h2.title.content__title Non quam tortor, proin eu egestas scelerisque purus.
+                                    p.paragraph.content__dscr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    .info.flex
+                                        .author.flex 
+                                            span.name-author Samatha Leuthex
+                                            span.date May 5, 3 min read
+                                        .icon 
+                                            img.favorite(src="./images/favorite.svg", alt="favorite")
+                                            a.icon__item(href="#")
+                                                img.share(src="./images/share.svg", alt="share")
+                            
+                        article.block
+                            .flex.blocks
+                                .block__photo 
+                                    img.block__img(src="./images/computer-laptop.jpg", alt="computer-laptop")    
+                                .content
+                                    h2.title.content__title Amet amet sed pharetra risus sit eget interdum.
+                                    p.paragraph.content__dscr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    .info.flex
+                                        .author.flex 
+                                            span.name-author Samatha Leuthex
+                                            span.date May 5, 3 min read
+                                        .icon 
+                                            img.favorite(src="./images/favorite.svg", alt="favorite")
+                                            a.icon__item(href="#")
+                                                img.share(src="./images/share.svg", alt="share")
+                .btn-wrap.flex
+                    button.popular__name see all popular article
+                hr.line                
+        section.posts
+            .container
+                span.popular__name all article
+                
+                article.posts__blocks
+                    .flex.posts__wrap
+                        .posts__photo 
+                            img.posts__photo-elems(src="./images/wheel,.jpg", alt="wheel")
+                        .posts__content 
+                            h2.title Massa eu in laoreet enim augue vulputate nunc.
+                            p.paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec. 
+                            .info.flex
+                                .author.flex 
+                                    span.name-author Samatha Leuthex
+                                    span.date May 5, 3 min read
+                                .icon 
+                                    img.favorite(src="./images/favorite.svg", alt="favorite")
+                                    a.icon__item(href="#")
+                                        img.share(src="./images/share.svg", alt="share")                        
+                
+                article.posts__blocks
+                    .flex.posts__wrap
+                        .posts__photo 
+                            img.posts__photo-elems(src="./images/colors.jpg", alt="colors")
+                        .posts__content 
+                            h2.title Feugiat a euismod arcu feugiat posuere morbi.
+                            p.paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec. 
+                            .info.flex
+                                .author.flex 
+                                    span.name-author Samatha Leuthex
+                                    span.date May 5, 3 min read 
+                                .icon 
+                                    img.favorite(src="./images/favorite.svg", alt="favorite")
+                                    a.icon__item(href="#")
+                                        img.share(src="./images/share.svg", alt="share")                        
+                
+                article.posts__blocks
+                    .flex.posts__wrap
+                        .posts__photo 
+                            img.posts__photo-elems(src="./images/tree.jpg", alt="tree")
+                        .posts__content 
+                            h2.title Sociis purus pellentesque faucibus vitae et felis.
+                            p.paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec. 
+                            .info.flex
+                                .author.flex 
+                                    span.name-author Samatha Leuthex
+                                    span.date May 5, 3 min read 
+                                .icon 
+                                    img.favorite(src="./images/favorite.svg", alt="favorite")
+                                    a.icon__item(href="#")
+                                        img.share(src="./images/share.svg", alt="share")                        
+                
+                article.posts__blocks
+                    .flex.posts__wrap
+                        .posts__photo 
+                            img.posts__photo-elems(src="./images/light.jpg", alt="light")
+                        .posts__content 
+                            h2.title Cursus feugiat mi pellentesque mauris sed eu.
+                            p.paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec. 
+                            .info.flex
+                                .author.flex 
+                                    span.name-author Samatha Leuthex
+                                    span.date May 5, 3 min read 
+                                .icon 
+                                    img.favorite(src="./images/favorite.svg", alt="favorite")
+                                    a.icon__item(href="#")
+                                        img.share(src="./images/share.svg", alt="share")                        
+                
+                article.posts__blocks
+                    .flex.posts__wrap
+                        .posts__photo 
+                            img.posts__photo-elems(src="./images/laptop.jpg", alt="laptop")
+                        .posts__content 
+                            h2.title A morbi arcu curabitur etiam fringilla augue.
+                            p.paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec. 
+                            .info.flex
+                                .author.flex 
+                                    span.name-author Samatha Leuthex
+                                    span.date May 5, 3 min read 
+                                .icon 
+                                    img.favorite(src="./images/favorite.svg", alt="favorite")
+                                    a.icon__item(href="#")
+                                        img.share(src="./images/share.svg", alt="share")                                    
+                
+                .posts__nav.flex 
+                    .posts__left 
+                        a(href="#")
+                            img.posts__arrow-left(src="./images/arrow-left.svg", alt="arrow-left")
+                        button.posts__create.name New Post
+                    .posts__right 
+                        button.posts__prev.name Old Post
+                        a(href="#") 
+                            img.posts__arrow-right(src="./images/arrow-right.svg", alt="arrow-right")
+    footer.footer
+            .container
+                .footer__team.flex
+                        .footer__content
+                            h2.title.white.footer__title 
+                                | Intersted to woek
+                                | with our team?
+                            p.paragraph.footer__paragraph.white
+                                | Lorem ipsum dolor sit amet,
+                                | consectetur adipiscing elit, sed do
+                                | eiusmod tempor incididunt ut 
+                                | labore et dolore magna aliqua.
+                        button.btn.footer__light Let’s Talk
+                hr.line
+                .footer__contacts.flex.container
+                    .footer__contact
+                        .footer__logo.flex 
+                            img(src="images/logo-light.svg", alt="logo")
+                            span Afrianska
+                        .footer__adress.flex 
+                            .str A.
+                            p.paragraph.footer__white Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        .footer__phones.flex 
+                            .str T.
+                            a.footer__phone(href="#") +62-812-7313-4321
+                        .footer__email.flex 
+                            .str E 
+                            a.email(href="mailto:hello.afrian@gmail.com") hello.afrian@gmail.com
+                
+                    .footer__transition.flex
+                        nav.footer__navs 
+                            .title-nav About US
+                            -var lst = ['About', 'What We Do', 'Project', 'How It Work With Us']
+                                        nav.footer__menu 
+                                            ul.footer__lst
+                                                each items in lst
+                                                    li.footer__item
+                                                        a.footer__nav(href= "#")= items
+                    .footer__social.flex
+                        .title-nav Follow US
+                        -var lst = ['Instagram', 'Facebook', 'LinkedIn', 'Youtube']
+                        nav.social
+                            ul.footer__lst
+                                each items in lst
+                                    li.footer__item
+                                        a.footer__nav(href= "#")= items
+                .footer__copyright 2019 © Afrianska. All rights reserved.
